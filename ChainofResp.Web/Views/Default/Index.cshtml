@@ -1,0 +1,26 @@
+﻿@model CustomerProcessViewModel
+@{
+    ViewData["Title"] = "Index";
+
+}
+<div class="card col-6 text-center shadow container">
+    <h3 class="card-title bg-primary text-white">Para Çekme Talebi</h3>
+
+    <div class="card-body">
+        <form method="post">
+            <div class="form-group">
+                <label class="control-label">Müşteri Adı Soyadı</label>
+                <input asp-for="FullName" class="form-control" required />
+            </div>
+            <br />
+            <div class="form-group">
+                <label class="control-label">Tutar</label>
+                <input asp-for="Amount" class="form-control" required />
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Para Çek" onclick="alert('Para çekme talebi alındı!')" class="btn btn-dark" />
+            </div>
+        </form>
+    </div>
+</div>
